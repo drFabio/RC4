@@ -1,7 +1,7 @@
 /*
  * ARC4.h
  *
- *  Created on: Nov 9, 2011
+ *  Created on: Apr 6, 2016
  *      Author: fabio
  */
 #ifndef ARC4_H_
