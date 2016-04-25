@@ -1,2 +1,5 @@
+CC=gcc
+CFLAGS=-I. -Wall -Wextra 
+
 arc4: ARC4.cpp
-	g++ -Wall -Wextra -c ARC4.cpp -I .
+	$(CC) -c ARC4.cpp $(CFLAGS)
