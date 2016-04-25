@@ -15,17 +15,12 @@ void  ARC4::prga(unsigned char * plaintext,unsigned char * cipher,int size){
     }
 }
 
-void  ARC4::prga_char( char * plaintext, char * cipher,int size){
-    for(int k=0;k<size;k++){
-        prgaIndexA=(prgaIndexA+1)%256;
-        prgaIndexB=(prgaIndexB+sbox[prgaIndexA])%256;
-        swap(sbox,prgaIndexA,prgaIndexB);
-        cipher[k]=sbox[(sbox[prgaIndexA]+sbox[prgaIndexB])%256]^plaintext[k];
-    }
+void  ARC4::prga( char * plaintext, char * cipher,int size){
+    prga((unsigned char *) plaintext, (unsigned char *) cipher, size);
 }
 
-void ARC4::encrypt_char( char * plaintext, char * ciphertext,int size){
-    prga_char(plaintext,ciphertext,size);
+void ARC4::encrypt( char * plaintext, char * ciphertext,int size){
+    prga(plaintext,ciphertext,size);
 }
 void ARC4::encrypt(unsigned char * plaintext,unsigned char * ciphertext,int size){
     prga(plaintext,ciphertext,size);

@@ -16,12 +16,12 @@ int main ()
     char * enc=  (char *) malloc(toEncrypt.size()+1);
     char * dec=  (char *) malloc(toEncrypt.size()+1);
 
-    rc4.encrypt_char((char *)  toEncrypt.c_str(), enc, toEncrypt.length());
+    rc4.encrypt((char *)  toEncrypt.c_str(), enc, toEncrypt.length());
     cout<<" Encrypted result \n";
     cout << enc << "\n";
 
     rc4.set_key((unsigned char*) someKey.c_str(),someKey.length());
-    rc4.encrypt_char(enc , dec, toEncrypt.length());
+    rc4.encrypt(enc , dec, toEncrypt.length());
 
     cout<<" Decrypted result \n";
     cout << dec << "\n";
