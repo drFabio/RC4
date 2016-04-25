@@ -23,9 +23,7 @@ void  ARC4::prga_char( char * plaintext, char * cipher,int size){
         cipher[k]=sbox[(sbox[prgaIndexA]+sbox[prgaIndexB])%256]^plaintext[k];
     }
 }
-void ARC4::hello() {
-  std::cout << "Hello World! ";
-} 
+
 void ARC4::encrypt_char( char * plaintext, char * ciphertext,int size){
     prga_char(plaintext,ciphertext,size);
 }
