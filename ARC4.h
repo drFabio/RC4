@@ -5,16 +5,36 @@
  *      Author: fabio
  */
 #ifndef ARC4_H_
-    #define ARC4_H_
+#define ARC4_H_
+
+    /**
+    * RC4 Encryptor utility for decrypting Strings
+    */
     class ARC4{
         public:
+            /**
+            * Set/Reset the key use this method if you want to reuse the same ARC4 structure again
+            * @param k the key
+            * @param size the size of the key
+            */
             void set_key(unsigned char * k,int size);
+            /**
+            * Encrypts a string
+            * @param in String to encrypt 
+            * @param out String to decrypt
+            * @param size size of the key to encrypt
+            */
             void encrypt(unsigned char * in,unsigned char * out,int size);
+            /**
+            * Encrypts a string
+            * @param in String to encrypt 
+            * @param out String to decrypt
+            * @param size size of the key to encrypt
+            */
             void encrypt(char * in,char * out,int size);
-            void ksa();
-            static void hello();
             ARC4();
         protected:
+            void ksa();
             void swap(unsigned char data[],int i ,int j);
             void prga(unsigned char * plaintext,unsigned char * cipher,int size);
             void prga(char * plaintext,char * cipher,int size);
