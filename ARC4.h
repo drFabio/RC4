@@ -9,6 +9,7 @@
 
     /**
     * RC4 Encryptor utility for decrypting Strings
+    * @brief Utility to RC4 encrypt bytes
     */
     class ARC4{
         public:
