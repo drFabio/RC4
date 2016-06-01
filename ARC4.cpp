@@ -40,12 +40,11 @@ void ARC4::ksa(unsigned char * key){
     }
 }
 void ARC4::set_key(unsigned char  k[],int size){
-    key=k;
     prgaIndexA=0;
     prgaIndexB=0;
     sizeKey=size;
     for(int i=0;i<256;i++){
         sbox[i]=(unsigned char)i;
     }
-    ksa(key);
+    ksa(k);
 }
