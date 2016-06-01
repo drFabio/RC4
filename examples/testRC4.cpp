@@ -12,7 +12,7 @@ int main ()
     string someKey  = "I_AM_A_KEY";
     string toEncrypt = "I am a plain text string";
     ARC4 rc4;
-    rc4.set_key((unsigned char*) someKey.c_str(),someKey.length());
+    rc4.setKey((unsigned char*) someKey.c_str(),someKey.length());
     char * enc=  (char *) malloc(toEncrypt.size()+1);
     char * dec=  (char *) malloc(toEncrypt.size()+1);
 
@@ -20,7 +20,7 @@ int main ()
     cout<<" Encrypted result \n";
     cout << enc << "\n";
 
-    rc4.set_key((unsigned char*) someKey.c_str(),someKey.length());
+    rc4.setKey((unsigned char*) someKey.c_str(),someKey.length());
     rc4.encrypt(enc , dec, toEncrypt.length());
 
     cout<<" Decrypted result \n";

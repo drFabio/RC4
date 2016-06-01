@@ -39,7 +39,7 @@ void ARC4::ksa(unsigned char * key){
         swap(sbox,i,j);
     }
 }
-void ARC4::set_key(unsigned char  k[],int size){
+void ARC4::setKey(unsigned char  k[],int size){
     prgaIndexA=0;
     prgaIndexB=0;
     sizeKey=size;

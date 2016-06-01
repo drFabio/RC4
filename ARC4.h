@@ -18,7 +18,7 @@
             * @param k the key
             * @param size the size of the key
             */
-            void set_key(unsigned char * k,int size);
+            void setKey(unsigned char * k,int size);
             /**
             * Encrypts a string
             * @param in String to encrypt 
