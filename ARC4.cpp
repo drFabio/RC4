@@ -32,7 +32,7 @@ void ARC4::swap(unsigned char data[],int i ,int j){
     data[i]=data[j];
     data[j]=temp;
 }
-void ARC4::ksa(){
+void ARC4::ksa(unsigned char * key){
     int j=0;
     for(int i=0;i<256;i++){
         j=(j+sbox[i]+key[i% sizeKey])%256;
@@ -47,5 +47,5 @@ void ARC4::set_key(unsigned char  k[],int size){
     for(int i=0;i<256;i++){
         sbox[i]=(unsigned char)i;
     }
-    ksa();
+    ksa(key);
 }
